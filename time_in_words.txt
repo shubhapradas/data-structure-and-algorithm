@@ -28,28 +28,7 @@ solution:string timeInWords(int h, int m) {
     return time;
 }
 
-int main()
-{
-    ofstream fout(getenv("OUTPUT_PATH"));
 
-    string h_temp;
-    getline(cin, h_temp);
-
-    int h = stoi(ltrim(rtrim(h_temp)));
-
-    string m_temp;
-    getline(cin, m_temp);
-
-    int m = stoi(ltrim(rtrim(m_temp)));
-
-    string result = timeInWords(h, m);
-
-    fout << result << "\n";
-
-    fout.close();
-
-    return 0;
-}
 explaination:This code takes in two integers, h and m, representing the hour and minute of a clock, respectively. It then converts the time into words, with the output being a string representation of the time in words.
 
 The code uses an array of strings, number_word, which contains the words for the numbers 1-29, as well as "quarter", "half", and the numbers 31-59 in reverse order. It then uses conditional statements to determine the appropriate string representation of the time based on the input hour and minute values.
