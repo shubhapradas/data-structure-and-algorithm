@@ -1,0 +1,65 @@
+problem link:https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/mojtaba-prepares-contest-29b2a044/
+
+#include <iostream>
+using namespace std;
+#include <iostream>
+
+using namespace std;
+
+int main() {   
+
+int t;   
+
+cin>>t;   
+
+while(t--) {       
+
+int g_price,p_price;       
+
+cin>>g_price>>p_price;       
+
+int n;       
+
+cin>>n;       
+
+int arr[n][2];       
+
+int total_cost_one = 0;       
+
+int total_cost_two = 0;       
+
+for(int i=0;i<n;i++) {           
+
+for(int j=0;j<2;j++) {               
+
+cin>>arr[i][j];           
+
+}       
+
+}       
+
+for(int i=0;i<n;i++) {           
+
+if(arr[i][0] == 1) {               
+
+total_cost_one += g_price;               
+
+total_cost_two +=p_price;           
+
+}           
+
+if(arr[i][1] == 1) {               
+
+total_cost_one += p_price;               
+
+total_cost_two += g_price;           
+
+}       
+
+}       
+
+cout<<min(total_cost_one,total_cost_two)<<endl;   
+
+}
+
+}
