@@ -1,0 +1,29 @@
+problemlink:https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/split-house-547be0e9/
+#include <iostream>
+using namespace std;
+
+int main() {
+	int num;
+    cin>>num;
+	string s;
+	cin>>s; int flag=0;
+	for(int i=0;i<s.length();i++)
+	{ 
+		if(s[i]!=(s.length()-1) && s[i]=='H' && s[i+1]=='H')
+		{   cout<<"NO";
+			flag=1;
+			break;
+		}
+		if(s[i]=='.')
+		{
+			s[i]='B';
+		}
+	}
+	if(flag==0)
+	{
+		cout<<"YES"<<endl;
+		cout<<s;
+	}
+	
+
+	}
